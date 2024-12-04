@@ -49,22 +49,22 @@ const countOccurrences = (grid, word) => {
 };
 
 /**
- * M M
- *  A
- * S S
+ * Counts the occurrences of specific diagonal patterns around the letter 'A' in a given grid.
  *
- * S S
- *  A
- * M M
+ * The function checks for the following patterns around each 'A':
+ * - ["M", "M", "S", "S"]
+ * - ["S", "S", "M", "M"]
+ * - ["M", "S", "M", "S"]
+ * - ["S", "M", "S", "M"]
  *
- * M S
- *  A
- * M S
+ * The patterns are checked in the following positions relative to 'A':
+ * - Top-left
+ * - Top-right
+ * - Bottom-left
+ * - Bottom-right
  *
- * S M
- *  A
- * S M
- *
+ * @param {string[][]} grid - A 2D array representing the grid of characters.
+ * @returns {number} The count of diagonal patterns found around 'A'.
  */
 const countDiagonalMASOccurrences = (grid) => {
   let count = 0;
